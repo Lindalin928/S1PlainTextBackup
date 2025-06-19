@@ -1,0 +1,46 @@
+│
+├── App.tsx                     # Firebase 初始化 + Auth Gate 入口
+├── navigation/
+│   └── RootNavigator.tsx       # Stack 導覽結構（登入 / Tabs）
+│   └── AppTabs.tsx             # Bottom Tabs 導覽模組
+│
+├── screens/
+│   ├── Auth/
+│   │   └── LoginScreen.tsx
+│   ├── Dashboard/
+│   │   └── Dashboard.tsx
+│   ├── Goals/
+│   │   ├── GoalSettingScreen.tsx
+│   │   ├── AddGoal.tsx
+│   │   └── TaskBreakdownBoard.tsx
+│   ├── Quotes/
+│   │   └── QuoteWallScreen.tsx
+│   ├── Voice/
+│   │   ├── VoiceMemoGPTModule.tsx
+│   │   └── VoiceNotesScreen.tsx
+│   ├── Discovery/
+│   │   ├── SelfDiscoveryScreen.tsx
+│   │   └── ActionStyleReportScreen.tsx
+│   ├── Emotions/
+│   │   └── HabitEmotionHeatmap.tsx
+│
+├── components/
+│   └── TaskItem.tsx
+│   └── ProgressBar.tsx
+│
+├── data/
+│   └── discoveryQuestions.ts
+├── hooks/
+│   └── useAuthListener.ts
+│
+├── services/
+│   ├── firebase.ts              # 初始化與 export Auth、Firestore、Storage
+│   └── gptApi.ts                # 所有 GPT 串接方法
+│
+├── storage/
+│   └── localAnswerStorage.ts    # 本地問卷暫存（未登入時使用）
+│
+├── utils/
+│   ├── dateHelper.ts
+│   ├── audioHelper.ts
+│   └── emotionHelper.ts
